@@ -1,0 +1,9 @@
+.container-fluid{
+    background-color: aqua;
+    padding: 2%;
+    margin:30px;
+}
+
+body{
+    background-color: cadetblue;
+}
