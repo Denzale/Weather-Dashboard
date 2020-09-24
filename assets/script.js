@@ -29,7 +29,7 @@ $.ajax({
 function fiveDayCast() {
     
 $.ajax({
-    url: "pro.openweathermap.org/data/2.5/forecast/hourly?id={city ID}&appid={API key}",
+    url: "pro.openweathermap.org/data/2.5/forecast/hourly?id=input&appid=d7daca23bb60b5cdedb491704005803bS",
     method: "GET"
 }).then(function (response) {
     console.log(response)
