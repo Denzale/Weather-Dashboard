@@ -1,8 +1,13 @@
-.container{
+.jumbotron{
+    display: flex;
+    justify-content: center;
+    border-style: double;
+}
+
+#rowDiv{
     display: flex;
     justify-content: center;
 }
-
 .searchFor{
     display:flex;
     justify-content: center;
