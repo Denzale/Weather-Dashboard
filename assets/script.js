@@ -1,16 +1,21 @@
 $(document).ready(function () {
-   let city = $("#city").val();
-   let key = 'appid=0ccd28292b38949c924be67f905d975a';
-    $('#submitWeather').click(funtion(){
+  let key = "920a4b29fbcfc27b5c48d10de6154ef9";
+  
+  $("#submitWeather").on("click", weatherSearch)
 
-         if(city = ''){
-        $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric" + 
-            "appid=0ccd28292b38949c924be67f905d975a",
-            method: "GET"
-        }).then(function (response) {
-            console.log(response)
-        });
-    }
+  function weatherSearch() {
+    const city = $('#city').val();
     
+    console.log(city)
+    const url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=imperial"
+    console.log(url)
+    $.ajax({
+      method: "GET",
+      url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=imperial"
+    }).then(function (data) {
+      console.log(data)
+      let wind = $("<p>").addClass("card-text").text("Wind: ")
+    }
+    )
+  };
 });
